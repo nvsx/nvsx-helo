@@ -3,9 +3,12 @@ var colors = require('colors');
 exports.print = function() {
 	// child process is not a module, it lives in the standard node.js
 	// find more info at http://nodejs.org/api.html#_child_processes
-	var process = require('child_process').exec;
+	var execute_command = require('child_process').exec;
+	var this_os = /^win/.test(process.platform) ? 'windows' : 'unixoid';
+	// DEBUG:
+	// this_os='windows';
 	
-	process("npm config get prefix", function (error, stdout, stderr) {
+	execute_command("npm config get prefix", function (error, stdout, stderr) {
 	// process("pwd", function (error, stdout, stderr) {
 		if (error !== null) {
 			console.log('ERROR: ' + error);
@@ -27,21 +30,32 @@ exports.print = function() {
 			console.log("    " + globalDir.red);
 			console.log(" "); // empty line
 			// ---------------------------------------------------------------
-			console.log("That means, in general all global npm files will be found in these 3 directories:".green);
-			console.log("    " + binDir.red);
-			console.log("    " + libDir.red);
-			console.log("    " + shareDir.red);
-			console.log("The " + "node_modules".blue + " directory is: ");
-			console.log("    " + globalDir.red + "/lib/node_modules".red);
+			if(this_os === 'windows') {
+				console.log("That means, in general the following locations will be used:".green);
+				console.log("Use \"" + "npm config ls".red + "\" or \"" + "npm config ls -l".red + "\" for more information.");
+				console.log("The " + "node_modules".blue + " directory should be: ");
+				console.log("    " + globalDir.red + "\\node_modules".red);
+				console.log("(You can create this directory manually if there are problems with installation of modules.)");
+			} 
+			else {
+				console.log("That means, in general all global npm files will be found in these 3 directories:".green);
+				console.log("    " + binDir.red);
+				console.log("    " + libDir.red);
+				console.log("    " + shareDir.red);
+				console.log("The " + "node_modules".blue + " directory is: ");
+				console.log("    " + globalDir.red + "/lib/node_modules".red);
+			} 
 			console.log(" "); // empty line
 			// ---------------------------------------------------------------
-			console.log("Having trouble with installing node modules because of missing rights?".green);
-			console.log("I do not recommend using sudo at all.");
-			console.log("Better change the location of your global npm direcory, or...");
-			console.log("I prefer to have a certain user (myuser) owning the files and beeing responsible for npm.");
-			console.log("So just change file permissions for user myuser: ");
-			console.log("    \"sudo chown -R myuser ".red + globalDir.red + "\"".red);
-			console.log(" "); // empty line
+			if(this_os !== 'windows') {
+				console.log("Having trouble with installing node modules because of missing rights?".green);
+				console.log("I do not recommend using sudo at all.");
+				console.log("Better change the location of your global npm direcory, or...");
+				console.log("I prefer to have a certain user (myuser) owning the files and beeing responsible for npm.");
+				console.log("So just change file permissions for user myuser: ");
+				console.log("    \"sudo chown -R myuser ".red + globalDir.red + "\"".red);
+				console.log(" "); // empty line
+			} 
 			// ---------------------------------------------------------------
 			console.log("using npm:".blue);
 			console.log("you can display the GLOBAL directory with:");
