@@ -14,7 +14,7 @@ var nvsxHelo = require('nvsx-helo');
 nvsxHelo.print();
 
 You can also run the function directly from the command line.   
-If the module is installed in the local node_modules directory:
+If the module is installed in the local node_modules directory:  
 node -e "var nvsxHelo = require('nvsx-helo');nvsxHelo.print();"
 
 ## Purpose
