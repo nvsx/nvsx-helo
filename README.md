@@ -10,10 +10,10 @@ npm install nvsx-helo
 
 ## Usage 
 
-var nvsxHelo = require('nvsx-helo');
+var nvsxHelo = require('nvsx-helo');  
 nvsxHelo.print();
 
-You can also run the function directly from the command line by going into the module-folder and executing "node run-directly"
+You can also run the function directly from the command line: node -e "var nvsxHelo = require('nvsx-helo');nvsxHelo.print();"
 
 ## Purpose
 
