@@ -25,4 +25,6 @@ Only purpose is to print out some (colored) text with infos about npm.
 
 By now there is only one function: nvsxHelo.print();
 
-test
+
+
+
