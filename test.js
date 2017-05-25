@@ -4,3 +4,19 @@
 
 const nvsxHelo = require(__dirname + "/index.js");
 nvsxHelo.print();
+
+
+/* 
+	develop:
+
+    npm adduser
+    npm whoami
+
+    npm config ls
+	npm config ls -l
+
+    npm version patch (1.0.0 -> 1.0.1)
+    npm publish 
+
+*/ 
+
