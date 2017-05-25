@@ -2,5 +2,5 @@
 // cd nvsx-helo
 // run this with "node test-runner"
 
-const nvsxHelo = require('./index.js');
+const nvsxHelo = require(__dirname + "/index.js");
 nvsxHelo.print();
