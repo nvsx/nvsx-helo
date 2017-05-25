@@ -9,8 +9,9 @@ nvsxHelo.print();
 /* 
 	develop:
 
-    npm adduser
+    # npm adduser
     npm whoami
+    npm login
 
     npm config ls
 	npm config ls -l
