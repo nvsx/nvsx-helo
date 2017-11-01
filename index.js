@@ -1,7 +1,6 @@
 const colors = require('colors');
 const path = require('path');
 
-
 exports.print = function() {
 	// child process is not a module, it lives in the standard node.js
 	// find more info at http://nodejs.org/api.html#_child_processes
@@ -9,7 +8,6 @@ exports.print = function() {
 	var this_os = /^win/.test(process.platform) ? 'windows' : 'unixoid';
 	// DEBUG:
 	// this_os='windows';
-
 
 	execute_command("npm config get prefix", function (error, stdout, stderr) {
 	// process("pwd", function (error, stdout, stderr) {
@@ -19,7 +17,6 @@ exports.print = function() {
 		}
 		else {
 
-
 			var globalDir = stdout;
 			globalDir = globalDir.replace(/\r\n|\r|\n/g, '');
 			//console.log("GLOBDIR: " + (globalDir.match(/\r/) && 'CR') + ' ' + (globalDir.match(/\n/) && 'LF'));
@@ -28,14 +25,12 @@ exports.print = function() {
 			const binDir     = path.join(globalDir + "/bin");
 			const shareDir = path.join(globalDir + "/share");
 
-
 			console.log("---------------------------------------------------------------");
 			console.log("about npm on this machine:".blue);
 			console.log(" "); // empty line
 			console.log("PREFIX of your GLOBAL npm installation: ".green);
 			console.log("    " + globalDir.red);
 			console.log(" "); // empty line
-
 
 			if(this_os === 'windows') {
 				console.log("That means, in general the following locations will be used:".green);
@@ -54,7 +49,6 @@ exports.print = function() {
 			}
 			console.log(" "); // empty line
 
-
 			if(this_os !== 'windows') {
 				console.log("Having trouble with installing node modules because of missing rights?".green);
 				console.log("I do not recommend using sudo at all.");
@@ -65,7 +59,6 @@ exports.print = function() {
 				console.log(" "); // empty line
 			}
 
-
 			console.log("using npm:".blue);
 			console.log("you can display the GLOBAL directory with:");
 			console.log("    \"npm config get prefix\"".red);
@@ -74,7 +67,6 @@ exports.print = function() {
 			console.log("if you change this, you'll probably also want to update your path with e.g.: ");
 			console.log("    echo \"export PATH=/some/directory/foobar/bin:$PATH\" >> $HOME/.profile\"".red);
 			console.log(" "); // empty line
-
 
 			console.log("inside a project folder use".blue);
 			console.log("\"npm ls\"".red + "                     for listing modules");

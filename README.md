@@ -4,19 +4,29 @@
 
 ## Installation
 
-* npm install nvsx-helo
+* global install: npm install -g nvsx-helo
+
+* local install: npm install nvsx-helo
+
+* local install and save to current project: npm i -S nvsx-helo
 
 ## Dependencies
 
-* The "color" module gets automatically installed. 
+* The "color" module gets automatically installed.
 
 ## Usage
 
-* var nvsxHelo = require('nvsx-helo');  
-nvsxHelo.print();
+* if globally installed just run "nvsx-helo"
 
-You can also run the function directly from the command line.   
-* node -e "var nvsxHelo = require('nvsx-helo');nvsxHelo.print();"
+* "npm nvsx-helo"
+
+* use it in your own script like this:  
+    var nvsxHelo = require('nvsx-helo');  
+    nvsxHelo.print();
+
+* You can also run the function directly from the command line like this:  
+    node -e "var nvsxHelo =
+    require('nvsx-helo');nvsxHelo.print();"
 
 ## Purpose
 
@@ -25,3 +35,7 @@ You can also run the function directly from the command line.
 ## API Reference
 
 * There is only one function: nvsxHelo.print();
+
+## Changes
+
+* v1.0.5 (2017-11-01): added "nvx-helo" command to run from the command line

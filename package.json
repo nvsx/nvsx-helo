@@ -1,9 +1,10 @@
 {
   "name": "nvsx-helo",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Show some info about global npm properties on your local npm installation.",
   "main": "index.js",
   "scripts": {},
+  "bin": {"nvsx-helo": "bin/nvsx-helo"},
   "author": "Ulrich Hung <nvsx@gmx.net>",
   "license": "ISC",
   "dependencies": {
