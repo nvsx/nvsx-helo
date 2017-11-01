@@ -18,7 +18,7 @@
 
 * if globally installed just run "nvsx-helo"
 
-* "npm nvsx-helo"
+* if installed locally: "npx nvsx-helo"
 
 * use it in your own script like this:  
     var nvsxHelo = require('nvsx-helo');  
@@ -38,4 +38,6 @@
 
 ## Changes
 
+* v1.0.7 (2017-11-01): bugfix (updated README)
+* v1.0.6 (2017-11-01): bugfix (broken command)
 * v1.0.5 (2017-11-01): added "nvx-helo" command to run from the command line
