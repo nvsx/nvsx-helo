@@ -1,6 +1,7 @@
 ## nvsx-helo
 
 * A simple test module. This is a test project. It tries to find out about the npm installation on the local machine and prints out some text.
+* npm package: https://www.npmjs.com/package/nvsx-helo
 
 ## Installation
 

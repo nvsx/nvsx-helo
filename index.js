@@ -1,3 +1,4 @@
+const version = 'v0.0.8';
 const colors = require('colors');
 const path = require('path');
 
@@ -77,7 +78,7 @@ exports.print = function() {
 			console.log("\"npm prune\"".red + "                  for deleting packages not in package.json but existent in node_modules");
 			console.log(" "); // empty line
 			console.log("---------------------------------------------------------------");
-
+			console.log("(nvsx-helo version " + version +")");
 		}
 	});
 }
