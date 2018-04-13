@@ -1,4 +1,4 @@
-const version = 'v0.0.8';
+const version = '1.0.8';
 const colors = require('colors');
 const path = require('path');
 

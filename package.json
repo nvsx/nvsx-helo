@@ -1,6 +1,6 @@
 {
   "name": "nvsx-helo",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Show some info about global npm properties on your local npm installation.",
   "main": "index.js",
   "scripts": {},
