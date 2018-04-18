@@ -13,7 +13,7 @@
 
 ## Dependencies
 
-* The "color" module gets automatically installed.
+* The "colors" module gets automatically installed.
 
 ## Usage
 
@@ -39,6 +39,7 @@
 
 ## Changes
 
+* v1.0.8 (2018-04-13): also print out version info
 * v1.0.7 (2017-11-01): bugfix (updated README)
 * v1.0.6 (2017-11-01): bugfix (broken command)
 * v1.0.5 (2017-11-01): added "nvx-helo" command to run from the command line
