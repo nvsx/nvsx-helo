@@ -1,11 +1,9 @@
 const colors    = require('colors');
 const path      = require('path');
 const commandLineArgs = require('command-line-args');
-// const options   = require('options');
 
 
 const version   = '1.0.9';
-// set default: (json|txt)
 let outputFormat = 'txt';
 
 
@@ -41,7 +39,6 @@ module.exports = {
 		else {
 			// READ from command line
 			const optionDefinitions = [
-				// { name: 'verbose', alias: 'v', type: Boolean },
 				{ name: 'format', type: String },
 			]
 			const options = commandLineArgs(optionDefinitions)
