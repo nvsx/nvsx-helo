@@ -64,6 +64,7 @@ https://github.com/nvsx/nvsx-helo
 
 
 ## Changes
+* v2.0.0. (): default output format changed to json
 * v1.0.9 (2018-07-29): added option for output format as json
 * v1.0.8 (2018-04-13): also print out version info
 * v1.0.7 (2017-11-01): bugfix (updated README)

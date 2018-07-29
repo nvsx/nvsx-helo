@@ -3,8 +3,8 @@ const path      = require('path');
 const commandLineArgs = require('command-line-args');
 
 
-const version   = '1.0.9';
-let outputFormat = 'txt';
+const version   = '2.0.0';
+let outputFormat = 'json';
 
 
 module.exports = { 
@@ -29,6 +29,8 @@ module.exports = {
 		infoObject.nvsxHelo.version = version;
 		infoObject.npm = {};
 		infoObject.npm.path = {};
+		infoObject.node = {};
+		infoObject.node.version = process.version;
 		
 		// decicde which outputFormat to use:
 		if(arg) {

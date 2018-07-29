@@ -12,7 +12,11 @@ const nvsxHelo = require(__dirname + "/index.js");
 // nvsxHelo.print({"format": "json"});
 nvsxHelo.print();
 
-/* 
+
+/*
+
+    npm docu: https://docs.npmjs.com/getting-started/what-is-npm
+
 	develop:
 
     # npm adduser
@@ -26,5 +30,7 @@ nvsxHelo.print();
     npm publish 
 
 */ 
+
+
 
 // EOF
