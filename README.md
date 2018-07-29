@@ -43,10 +43,10 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 
 
 ## API Reference
-* print: There is one default function: nvsxHelo.print();
+* print(): There is one default function: nvsxHelo.print();
   * print can be called with a config object, e.g. nvsxHelo.print({"format": "json"})
 * getOutputFormat()
-* setOutputFormat()
+* setOutputFormat(txt|json)
 * command line arguments are applied, e.g. nvsx-helo --format=json
 
 
