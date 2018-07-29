@@ -6,29 +6,20 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 * It just prints out some info about the currently used npm installation. 
 
 
-## Warning: In the next (whenever) version the default output format will change from text to JSON!
-* By now you get output as JSON this way:
-** command line:
+## Quickstart:
 ```sh
-    nvsx-helo --format=json
+    $ npm install -g nvsx-helo
+    $ nvsx-helo
 ```
-** in script:
-```javascript
-    nvsxHelo.setFormat('json');
-    nvsxHelo.print();
-```
-or 
-```javascript
-    nvsxHelo.print({"format": "json"});
-```
+
 
 ## Installation
 * global install: 
 ```sh
-npm install -g nvsx-helo
+    $ npm install -g nvsx-helo
 ```
-* local install: ```npm install nvsx-helo```
-* local install and save to current project: ```npm i -S nvsx-helo```
+* local install: ```$ npm install nvsx-helo```
+* local install and save to current project: ```$ npm i -S nvsx-helo```
 
 
 ## Dependencies
@@ -36,7 +27,7 @@ npm install -g nvsx-helo
 
 
 ## Usage
-* if globally installed just run "nvsx-helo" or "nvsx-helo --format=json"
+* if globally installed just run "nvsx-helo" or "$  nvsx-helo --format=json"
 * if installed locally: "node node_modules/nvsx-helo/nvsx-helo"
 * use it in your own script like this:  
     var nvsxHelo = require('nvsx-helo');  
