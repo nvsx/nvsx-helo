@@ -2,9 +2,15 @@
 // cd nvsx-helo
 // run this with "node test"
 
-const nvsxHelo = require(__dirname + "/index.js");
-nvsxHelo.print();
 
+const nvsxHelo = require(__dirname + "/index.js");
+// nvsxHelo.getOutputFormat();
+// nvsxHelo.setOutputFormat('json');
+// nvsxHelo.getOutputFormat();
+// nvsxHelo.setOutputFormat('txt');
+// nvsxHelo.getOutputFormat();
+// nvsxHelo.print({"format": "json"});
+nvsxHelo.print();
 
 /* 
 	develop:
@@ -21,3 +27,4 @@ nvsxHelo.print();
 
 */ 
 
+// EOF

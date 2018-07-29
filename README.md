@@ -1,45 +1,73 @@
-## nvsx-helo
+# nvsx-helo
 
-* A simple test module. This is a test project. It tries to find out about the npm installation on the local machine and prints out some text.
-* npm package: https://www.npmjs.com/package/nvsx-helo
+npm package: https://www.npmjs.com/package/nvsx-helo
+
+* This is a simple test and practice project. 
+* It just prints out some info about the currently used npm installation. 
+
+
+## Warning: In the next (whenever) version the default output format will change from text to JSON!
+* By now you get output as JSON this way:
+** command line:
+```sh
+    nvsx-helo --format=json
+```
+** in script:
+```javascript
+    nvsxHelo.setFormat('json');
+    nvsxHelo.print();
+```
+or 
+```javascript
+    nvsxHelo.print({"format": "json"});
+```
 
 ## Installation
+* global install: 
+```sh
+npm install -g nvsx-helo
+```
+* local install: ```npm install nvsx-helo```
+* local install and save to current project: ```npm i -S nvsx-helo```
 
-* global install: npm install -g nvsx-helo
-
-* local install: npm install nvsx-helo
-
-* local install and save to current project: npm i -S nvsx-helo
 
 ## Dependencies
+* The "colors" module and the "command-line-args" module get automatically installed.
 
-* The "colors" module gets automatically installed.
 
 ## Usage
-
-* if globally installed just run "nvsx-helo"
-
-* if installed locally: "npx nvsx-helo"
-
+* if globally installed just run "nvsx-helo" or "nvsx-helo --format=json"
+* if installed locally: "node node_modules/nvsx-helo/nvsx-helo"
 * use it in your own script like this:  
     var nvsxHelo = require('nvsx-helo');  
     nvsxHelo.print();
-
+    nvsxHelo.setFormat('json');
+    nvsxHelo.print();
 * You can also run the function directly from the command line like this:  
-    node -e "var nvsxHelo =
-    require('nvsx-helo');nvsxHelo.print();"
+    node -e "var nvsxHelo=require('nvsx-helo');nvsxHelo.print();"
+
 
 ## Purpose
+* Only purpose is to print out some infos about npm. Either in colored text or json format. 
 
-* Only purpose is to print out some (colored) text with infos about npm.
 
 ## API Reference
+* print: There is one default function: nvsxHelo.print();
+  * print can be called with a config object, e.g. nvsxHelo.print({"format": "json"})
+* getOutputFormat()
+* setOutputFormat()
+* command line arguments are applied, e.g. nvsx-helo --format=json
 
-* There is only one function: nvsxHelo.print();
+
+## Sourcecode
+https://github.com/nvsx/nvsx-helo
+
 
 ## Changes
-
+* v1.0.9 (2018-07-29): added option for output format as json
 * v1.0.8 (2018-04-13): also print out version info
 * v1.0.7 (2017-11-01): bugfix (updated README)
 * v1.0.6 (2017-11-01): bugfix (broken command)
 * v1.0.5 (2017-11-01): added "nvx-helo" command to run from the command line
+
+// EOF
