@@ -32,6 +32,7 @@ module.exports = {
 		infoObject.node = {};
 		infoObject.node.version = process.version;
 		infoObject.node.versions = process.versions;
+		infoObject.node.uptime = process.uptime();
 		
 		// decicde which outputFormat to use:
 		if(arg) {
