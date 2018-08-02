@@ -31,6 +31,7 @@ module.exports = {
 		infoObject.npm.path = {};
 		infoObject.node = {};
 		infoObject.node.version = process.version;
+		infoObject.node.versions = process.versions;
 		
 		// decicde which outputFormat to use:
 		if(arg) {
