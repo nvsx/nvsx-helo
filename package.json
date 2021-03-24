@@ -11,7 +11,7 @@
   "bin": {
     "nvsx-helo": "nvsx-helo"
   },
-  "author": "Ulrich Hung <nvsx@gmx.net>",
+  "author": "Ullebot <nvsx@ullebot.net>",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.3.1",
