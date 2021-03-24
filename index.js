@@ -2,10 +2,8 @@ const colors    = require('colors');
 const path      = require('path');
 const commandLineArgs = require('command-line-args');
 
-
 const version   = '2.0.0';
 let outputFormat = 'json';
-
 
 module.exports = { 
 	getOutputFormat(){
@@ -27,6 +25,21 @@ module.exports = {
 		let infoObject = {};
 		infoObject.nvsxHelo = {};
 		infoObject.nvsxHelo.version = version;
+		infoObject.nvsxHelo.comment = {};
+		infoObject.nvsxHelo.comment.npm_version         = 'npm -v';
+		infoObject.nvsxHelo.comment.npm_local_pkgs      = 'npm ls --depth=0';
+		infoObject.nvsxHelo.comment.npm_global_pkgs     = 'npm ls --depth=0 --global';
+		infoObject.nvsxHelo.comment.npm_show_global_dir = 'npm config get prefix';
+		infoObject.nvsxHelo.comment.npm_set_global_dir  = 'npm config set prefix /some/directory/foobar';
+		infoObject.nvsxHelo.comment.shell_update_path   = 'export PATH=/some/directory/foobar/bin:$PATH" >> $HOME/.profile';
+
+		infoObject.nvsxHelo.comment.local_list_modules  = 'npm ls';
+		infoObject.nvsxHelo.comment.local_list_outdated = 'npm outdated';
+		infoObject.nvsxHelo.comment.local_pkgs_update   = 'npm update';
+		infoObject.nvsxHelo.comment.local_pkg_uninstall = 'npm uninstall package_name';
+		infoObject.nvsxHelo.comment.local_pkg_uninstall_modify_package_json = 'npm uninstall package_name --save';
+		infoObject.nvsxHelo.comment.local_pkg_delete_when_not_in_package_json = 'npm prune';
+
 		infoObject.npm = {};
 		infoObject.npm.path = {};
 		infoObject.node = {};
@@ -70,10 +83,11 @@ module.exports = {
 			else {
 				let globalDir = stdout;
 				globalDir = globalDir.replace(/\r\n|\r|\n/g, '');
-				infoObject.npm.path.global = globalDir;
-				infoObject.npm.path.lib    = path.join(globalDir, "/lib");
-				infoObject.npm.path.bin    = path.join(globalDir + "/bin");
-				infoObject.npm.path.share  = path.join(globalDir + "/share");
+				infoObject.npm.path.global  = globalDir;
+				infoObject.npm.path.lib     = path.join(globalDir, "/lib");
+				infoObject.npm.path.bin     = path.join(globalDir + "/bin");
+				infoObject.npm.path.share   = path.join(globalDir + "/share");
+				infoObject.npm.path.modules = path.join(globalDir + "/lib/node_modules");
 
 				if(outputFormat === 'json' ) {
 					console.log(JSON.stringify(infoObject, null, 2));
