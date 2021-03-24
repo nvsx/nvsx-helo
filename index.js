@@ -25,20 +25,24 @@ module.exports = {
 		let infoObject = {};
 		infoObject.nvsxHelo = {};
 		infoObject.nvsxHelo.version = version;
-		infoObject.nvsxHelo.comment = {};
-		infoObject.nvsxHelo.comment.npm_version         = 'npm -v';
-		infoObject.nvsxHelo.comment.npm_local_pkgs      = 'npm ls --depth=0';
-		infoObject.nvsxHelo.comment.npm_global_pkgs     = 'npm ls --depth=0 --global';
-		infoObject.nvsxHelo.comment.npm_show_global_dir = 'npm config get prefix';
-		infoObject.nvsxHelo.comment.npm_set_global_dir  = 'npm config set prefix /some/directory/foobar';
-		infoObject.nvsxHelo.comment.shell_update_path   = 'export PATH=/some/directory/foobar/bin:$PATH" >> $HOME/.profile';
+		infoObject.nvsxHelo.comments = {};
+		infoObject.nvsxHelo.comments.npm_version         = 'npm -v';
+		infoObject.nvsxHelo.comments.npm_local_pkgs      = 'npm ls --depth=0';
+		infoObject.nvsxHelo.comments.npm_global_pkgs     = 'npm ls --depth=0 --global';
+		infoObject.nvsxHelo.comments.npm_config_list     = 'npm config list';
+		infoObject.nvsxHelo.comments.npm_config_list_xl  = 'npm config ls -l';
+		infoObject.nvsxHelo.comments.npm_show_global_dir = 'npm config get prefix';
 
-		infoObject.nvsxHelo.comment.local_list_modules  = 'npm ls';
-		infoObject.nvsxHelo.comment.local_list_outdated = 'npm outdated';
-		infoObject.nvsxHelo.comment.local_pkgs_update   = 'npm update';
-		infoObject.nvsxHelo.comment.local_pkg_uninstall = 'npm uninstall package_name';
-		infoObject.nvsxHelo.comment.local_pkg_uninstall_modify_package_json = 'npm uninstall package_name --save';
-		infoObject.nvsxHelo.comment.local_pkg_delete_when_not_in_package_json = 'npm prune';
+		infoObject.nvsxHelo.comments.npm_set_global_dir  = 'npm config set prefix=$HOME/.node_modules_global';
+		infoObject.nvsxHelo.comments.shell_update_path   = 'export PATH=$HOME/.node_modules_global/bin:$PATH" >> $HOME/.profile';
+		infoObject.nvsxHelo.comments.shell_show_config   = 'cat $HOME/.npmrc';
+
+		infoObject.nvsxHelo.comments.local_list_modules  = 'npm ls';
+		infoObject.nvsxHelo.comments.local_list_outdated = 'npm outdated';
+		infoObject.nvsxHelo.comments.local_pkgs_update   = 'npm update';
+		infoObject.nvsxHelo.comments.local_pkg_uninstall = 'npm uninstall package_name';
+		infoObject.nvsxHelo.comments.local_pkg_uninstall_modify_package_json = 'npm uninstall package_name --save';
+		infoObject.nvsxHelo.comments.local_pkg_delete_when_not_in_package_json = 'npm prune';
 
 		infoObject.npm = {};
 		infoObject.npm.path = {};
@@ -93,8 +97,7 @@ module.exports = {
 					console.log(JSON.stringify(infoObject, null, 2));
 				}
 				else {
-					console.log("---------------------------------------------------------------");
-					console.log("about npm on this machine:".blue);
+					console.log("##### about npm on this machine #####".blue);
 					console.log(" "); // empty line
 					console.log("PREFIX of your GLOBAL npm installation: ".green);
 					console.log("    " + infoObject.npm.path.global.red);
@@ -145,8 +148,8 @@ module.exports = {
 					console.log("\"npm uninstall package_name --save\"".red + " for also updating the package.json");
 					console.log("\"npm prune\"".red + "                  for deleting packages not in package.json but existent in node_modules");
 					console.log(" "); // empty line
-					console.log("---------------------------------------------------------------");
 					console.log("(nvsx-helo version " + infoObject.nvsxHelo.version +")");
+					console.log(" "); // empty line
 				}
 			}
 		});
