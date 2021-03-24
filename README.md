@@ -46,12 +46,12 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 ```
     var nvsxHelo = require('nvsx-helo');  
     nvsxHelo.print();
-    nvsxHelo.setFormat('json');
+    nvsxHelo.setFormat('txt');
     nvsxHelo.print();
 ```
 * You can also run the function directly from the command line like this:
 ```
-    $ node -e "var nvsxHelo=require('nvsx-helo');nvsxHelo.print();
+    $ node -e "var nvsxHelo=require('nvsx-helo');nvsxHelo.print();"
 ```
 
 ## Purpose
@@ -68,7 +68,8 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 https://github.com/nvsx/nvsx-helo
 
 ## Changes
-* v2.0.0 (2021-03-24): default output format changed to json
+* v2.0.1 (2021-03-24): bugfixing the README.md
+* v2.0.0 (2021-03-24): default output format changed to json, json content enhanced
 * v1.0.9 (2018-07-29): added option for output format as json
 * v1.0.8 (2018-04-13): also print out version info
 * v1.0.7 (2017-11-01): bugfix (updated README)
