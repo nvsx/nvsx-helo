@@ -5,13 +5,11 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 * This is a simple test and practice project. 
 * It just prints out some info about the currently used npm installation. 
 
-
 ## Quickstart:
 ```sh
     $ npm install -g nvsx-helo
     $ nvsx-helo
 ```
-
 
 ## Installation
 * global install: 
@@ -21,10 +19,8 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 * local install: ```$ npm install nvsx-helo```
 * local install and save to current project: ```$ npm i -S nvsx-helo```
 
-
 ## Dependencies
 * The "colors" module and the "command-line-args" module get automatically installed.
-
 
 ## Usage
 * if globally installed just run "nvsx-helo" or "$  nvsx-helo --format=json"
@@ -37,10 +33,8 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 * You can also run the function directly from the command line like this:  
     node -e "var nvsxHelo=require('nvsx-helo');nvsxHelo.print();"
 
-
 ## Purpose
 * Only purpose is to print out some infos about npm. Either in colored text or json format. 
-
 
 ## API Reference
 * print(): There is one default function: nvsxHelo.print();
@@ -49,10 +43,8 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 * setOutputFormat(txt|json)
 * command line arguments are applied, e.g. nvsx-helo --format=json
 
-
 ## Sourcecode
 https://github.com/nvsx/nvsx-helo
-
 
 ## Changes
 * v2.0.0 (???-??-??): default output format changed to json
