@@ -34,7 +34,7 @@ module.exports = {
 		infoObject.nvsxHelo.comments.npm_show_global_dir = 'npm config get prefix';
 
 		infoObject.nvsxHelo.comments.npm_set_global_dir  = 'npm config set prefix=$HOME/.node_modules_global';
-		infoObject.nvsxHelo.comments.shell_update_path   = 'export PATH=$HOME/.node_modules_global/bin:$PATH" >> $HOME/.profile';
+		infoObject.nvsxHelo.comments.shell_update_path   = 'export PATH=$HOME/.node_modules_global/bin:$PATH >> $HOME/.profile';
 		infoObject.nvsxHelo.comments.shell_show_config   = 'cat $HOME/.npmrc';
 
 		infoObject.nvsxHelo.comments.local_list_modules  = 'npm ls';
