@@ -2,7 +2,7 @@ const colors    = require('colors');
 const path      = require('path');
 const commandLineArgs = require('command-line-args');
 
-const version   = '2.0.0';
+const version   = '2.0.3';
 let outputFormat = 'json';
 
 module.exports = { 
