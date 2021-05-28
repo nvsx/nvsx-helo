@@ -1,11 +1,14 @@
-const colors    = require('colors');
 const path      = require('path');
-const commandLineArgs = require('command-line-args');
+const colors    = require('colors');
 
-const version   = '2.0.3';
+const version   = '2.0.4';
 let outputFormat = 'json';
 
 module.exports = { 
+	getVersion(){
+		console.log(version)
+		return version
+	},
 	getOutputFormat(){
 		console.log(outputFormat)
 		return outputFormat
@@ -50,37 +53,30 @@ module.exports = {
 		infoObject.node.version = process.version;
 		infoObject.node.versions = process.versions;
 		infoObject.node.uptime = process.uptime();
-		
-		// decicde which outputFormat to use:
+
+		// check command line arguments:
+		let req_v = false;
+		process.argv.forEach( par => {
+			if (par === '-v' || par === '--version') {
+				req_v = true;
+			}
+			if (par === '--format=txt' || par === '--format=text') {
+				outputFormat = 'txt';
+			}
+		})
+		// check print arg (config object):
 		if(arg) {
 			if(arg.format) {
 				outputFormat = arg.format;
 			}
 		}
-		else {
-			// READ from command line
-			const optionDefinitions = [
-				{ name: 'format', type: String },
-			]
-			const options = commandLineArgs(optionDefinitions)
-			let formatRequested = options.format;
-			if( formatRequested && typeof(formatRequested) === 'string' ) {
-				formatRequested = formatRequested.toLowerCase();
-			}
-			else {
-				formatRequested = '';
-			}
-			if(formatRequested == 'json' ) { 
-				outputFormat = 'json'; 
-			}
-			else if(formatRequested === 'txt' ||formatRequested === 'text') {
-				outputFormat = 'txt';
-			}
-		}
 
 		execute_command("npm config get prefix", function (error, stdout, stderr) {
 			// process("pwd", function (error, stdout, stderr) {
-			if (error !== null) {
+			if ( req_v === true ) {
+				console.log("nvsx-helo version " + version)
+			}
+			else if (error !== null) {
 				console.log('ERROR: ' + error);
 				console.log('STDERR: ' + stderr);
 			}

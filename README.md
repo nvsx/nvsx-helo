@@ -26,7 +26,7 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 ```
 
 ## Dependencies
-* The "colors" module and the "command-line-args" module get automatically installed.
+* The "colors" module gets automatically installed.
 
 ## Usage
 * if globally installed just run 
@@ -68,7 +68,10 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 https://github.com/nvsx/nvsx-helo
 
 ## Changes
-* v2.0.1 (2021-03-24): bugfixing the README.md
+* v2.0.4 (2021-05-19): added version parameter (-v, --version)
+* v2.0.3 (2021-03-24): bugfix README
+* v2.0.2 (2021-03-24): bugfix README
+* v2.0.1 (2021-03-24): bugfix README
 * v2.0.0 (2021-03-24): default output format changed to json, json content enhanced
 * v1.0.9 (2018-07-29): added option for output format as json
 * v1.0.8 (2018-04-13): also print out version info
