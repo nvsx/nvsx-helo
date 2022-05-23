@@ -54,7 +54,7 @@ array-back, colors, command-line-args, find-replace, lodash.camelcase, typical
 * use it in your own script like this:
 ```
     // old version2: var nvsxHelo = require('nvsx-helo');  
-    import nvsx-helo from 'nvsx-helo';
+    import nvsxHelo from 'nvsx-helo';
     nvsxHelo.print();
     nvsxHelo.setFormat('txt');
     nvsxHelo.print();
