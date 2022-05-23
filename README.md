@@ -5,10 +5,18 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 * This is a project to inspect the local npm and node ecosystem. 
 * It prints out some info about the currently used npm and node installations. 
 
-## Quickstart:
+## Quickstart
 ```sh
     $ npm install -g nvsx-helo
     $ nvsx-helo
+```
+
+## Heads-Up
+<i>nvsx-helo</i> is a module since version v3. You must import it in your code with 
+```import nvsxHelo from 'nvsx-helo'```. 
+If you want to use the old "require" syntax, then use the older v2 version like so:
+```
+npm i -D nvsx-helo@^2
 ```
 
 ## Installation
@@ -20,16 +28,17 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 ```
     $ npm install nvsx-helo
 ```
-* local install and save to current project: 
+* local install and save as dev-dependency: 
 ```
-    $ npm i -S nvsx-helo
+    $ npm i -D nvsx-helo
 ```
 
 ## Dependencies
-* The "colors" module gets automatically installed.
+* The "colors" module and 'command-line-args' module are getting installed. These module load further modules so we end up with: 
+array-back, colors, command-line-args, find-replace, lodash.camelcase, typical
 
 ## Usage
-* if globally installed just run 
+* if globally installed, then just run 
 ```
     $ nvsx-helo
     $ # or:
@@ -44,7 +53,8 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 ```
 * use it in your own script like this:
 ```
-    var nvsxHelo = require('nvsx-helo');  
+    // old version2: var nvsxHelo = require('nvsx-helo');  
+    import nvsx-helo from 'nvsx-helo';
     nvsxHelo.print();
     nvsxHelo.setFormat('txt');
     nvsxHelo.print();
@@ -68,6 +78,7 @@ npm package: https://www.npmjs.com/package/nvsx-helo
 https://github.com/nvsx/nvsx-helo
 
 ## Changes
+* v3.0.0 (2022-05-23): change to module, use import instead of require
 * v2.0.4 (2021-05-19): added version parameter (-v, --version)
 * v2.0.3 (2021-03-24): bugfix README
 * v2.0.2 (2021-03-24): bugfix README

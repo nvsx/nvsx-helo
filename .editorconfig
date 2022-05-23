@@ -1,0 +1,38 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+# JavaScript
+[*.js]
+indent_style = space
+indent_size = 2
+
+# Stylesheets
+[*.{css,scss}]
+indent_style = space
+indent_size = 4
+
+# HTML
+[*.{htm,html}]
+indent_style = space
+indent_size = 4
+
+# JSON
+[*.json]
+indent_style = space
+indent_size = 4
+
+# Markdown
+[*.md]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = false

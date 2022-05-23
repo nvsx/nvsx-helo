@@ -1,7 +1,8 @@
 {
   "name": "nvsx-helo",
-  "version": "2.0.4",
-  "description": "Show some info about global properties of your local npm installation.",
+  "version": "3.0.0",
+  "description": "Show some info about your current npm and node installation.",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/nvsx/nvsx-helo.git"
@@ -13,8 +14,8 @@
   },
   "author": "Ullebot <nvsx@ullebot.net>",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "colors": "^1.4.0",
-    "command-line-args": "^5.1.1"
+    "command-line-args": "^5.2.1"
   }
 }

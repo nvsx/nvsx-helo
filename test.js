@@ -11,7 +11,9 @@
 // node -e "const nvsxHelo = require(__dirname + \"/index.js\");;nvsxHelo.print();"
 // node -e "const nvsxHelo = require(__dirname + \"/index.js\");;nvsxHelo.print({\"format\": \"txt\"});"
 
-const nvsxHelo = require(__dirname + "/index.js");
+// const nvsxHelo = require(__dirname + "/index.js");
+import nvsxHelo from "./index.js";
+nvsxHelo.setOutputFormat('txt');
 nvsxHelo.print();
 
 console.log("----------- debug ---------")
