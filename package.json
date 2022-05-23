@@ -1,6 +1,6 @@
 {
   "name": "nvsx-helo",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Show some info about your current npm and node installation.",
   "type": "module",
   "repository": {
@@ -9,10 +9,10 @@
   },
   "main": "index.js",
   "scripts": {},
-  "bin": {
-    "nvsx-helo": "nvsx-helo"
+  "bin":{
+    "nvsx-helo":"./nvsx-helo.js"
   },
-  "author": "Ullebot <nvsx@ullebot.net>",
+  "author": "nvsx <nvsx@gmx.net>",
   "license": "ISC",
   "devDependencies": {
     "colors": "^1.4.0",
