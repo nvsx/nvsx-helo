@@ -1,4 +1,0 @@
-#!/usr/bin/env node
-
-const nvsxHelo = require(__dirname + "/index.js");
-nvsxHelo.print();
