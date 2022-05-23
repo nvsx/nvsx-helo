@@ -9,7 +9,7 @@ import path from 'path';
 import('colors');
 import { exec } from 'child_process';
 
-const version = '3.0.4';
+const version = '3.0.5';
 let outputFormat = 'json';
 
 const nvsxHelo = { 
