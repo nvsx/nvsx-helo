@@ -78,6 +78,7 @@ array-back, colors, command-line-args, find-replace, lodash.camelcase, typical
 https://github.com/nvsx/nvsx-helo
 
 ## Changes
+* v3.0.7 (2022-06-04): add nodejs homepage to infos
 * v3.0.6 (2022-05-23): change to module, use import instead of require
 * v2.0.4 (2021-05-19): added version parameter (-v, --version)
 * v2.0.3 (2021-03-24): bugfix README

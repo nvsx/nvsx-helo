@@ -9,7 +9,7 @@ import path from 'path';
 import('colors');
 import { exec } from 'child_process';
 
-const version = '3.0.6';
+const version = '3.0.7';
 let outputFormat = 'json';
 
 const nvsxHelo = { 
@@ -56,6 +56,7 @@ const nvsxHelo = {
   infoObject.nvsxHelo.comments.local_pkg_uninstall = 'npm uninstall package_name';
   infoObject.nvsxHelo.comments.local_pkg_uninstall_modify_package_json = 'npm uninstall package_name --save';
   infoObject.nvsxHelo.comments.local_pkg_delete_when_not_in_package_json = 'npm prune';
+  infoObject.nvsxHelo.comments.nodejs_homepage     = 'https://nodejs.org/';
 
   infoObject.npm = {};
   infoObject.npm.path = {};

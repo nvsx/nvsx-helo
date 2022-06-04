@@ -1,6 +1,6 @@
 {
   "name": "nvsx-helo",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "description": "Show some info about your current npm and node installation.",
   "type": "module",
   "repository": {
